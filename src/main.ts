@@ -95,7 +95,7 @@ const success = async (pos: GeolocationPosition) => {
         throw new Error("compassBtn not found");
     }
     compassBtn.addEventListener("click", () => {
-      const compassRestaurants = restaurants.filter(
+      const compassRestaurants: Restaurant[] = restaurants.filter(
         (restaurant: Restaurant) => restaurant.company === "Compass Group"
       );
       console.log(compassRestaurants);
